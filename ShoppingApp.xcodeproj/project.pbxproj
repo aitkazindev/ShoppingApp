@@ -26,6 +26,8 @@
 		B6E1D5D728D950E3009A5463 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E1D5D628D950E3009A5463 /* CategoryCollectionViewCell.swift */; };
 		B6E1D5F228D959E1009A5463 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B6E1D5F128D959E1009A5463 /* GoogleService-Info.plist */; };
 		B6E1D5F428D95D03009A5463 /* FirebaseCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E1D5F328D95D03009A5463 /* FirebaseCollectionReference.swift */; };
+		B6E1D5F928D95EA1009A5463 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E1D5F828D95EA1009A5463 /* Category.swift */; };
+		B6E1D5FC28D95F2C009A5463 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6E1D5FB28D95F2C009A5463 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		B6E1D5D628D950E3009A5463 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		B6E1D5F128D959E1009A5463 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B6E1D5F328D95D03009A5463 /* FirebaseCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollectionReference.swift; sourceTree = "<group>"; };
+		B6E1D5F828D95EA1009A5463 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		B6E1D5FB28D95F2C009A5463 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,10 +88,11 @@
 			children = (
 				B67E1B8928D949A400D80EA9 /* AppDelegate.swift */,
 				B67E1B8B28D949A400D80EA9 /* SceneDelegate.swift */,
+				B6E1D5FA28D95EAF009A5463 /* Model */,
 				B67E1B8D28D949A400D80EA9 /* ViewController.swift */,
-				B6E1D5D628D950E3009A5463 /* CategoryCollectionViewCell.swift */,
-				B6E1D5D428D950D3009A5463 /* CategoryCollectionViewController.swift */,
-				B6E1D5F328D95D03009A5463 /* FirebaseCollectionReference.swift */,
+				B6E1D5F728D95E76009A5463 /* CustomCells */,
+				B6E1D5F628D95E66009A5463 /* MainViews */,
+				B6E1D5F528D95E48009A5463 /* Helpers */,
 				B67E1B8F28D949A400D80EA9 /* Main.storyboard */,
 				B67E1B9228D949A500D80EA9 /* Assets.xcassets */,
 				B67E1B9428D949A500D80EA9 /* LaunchScreen.storyboard */,
@@ -95,6 +100,39 @@
 				B6E1D5F128D959E1009A5463 /* GoogleService-Info.plist */,
 			);
 			path = ShoppingApp;
+			sourceTree = "<group>";
+		};
+		B6E1D5F528D95E48009A5463 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				B6E1D5F328D95D03009A5463 /* FirebaseCollectionReference.swift */,
+				B6E1D5FB28D95F2C009A5463 /* Constants.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		B6E1D5F628D95E66009A5463 /* MainViews */ = {
+			isa = PBXGroup;
+			children = (
+				B6E1D5D428D950D3009A5463 /* CategoryCollectionViewController.swift */,
+			);
+			path = MainViews;
+			sourceTree = "<group>";
+		};
+		B6E1D5F728D95E76009A5463 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				B6E1D5D628D950E3009A5463 /* CategoryCollectionViewCell.swift */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		B6E1D5FA28D95EAF009A5463 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B6E1D5F828D95EA1009A5463 /* Category.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +230,8 @@
 				B67E1B8A28D949A400D80EA9 /* AppDelegate.swift in Sources */,
 				B6E1D5D528D950D3009A5463 /* CategoryCollectionViewController.swift in Sources */,
 				B67E1B8C28D949A400D80EA9 /* SceneDelegate.swift in Sources */,
+				B6E1D5F928D95EA1009A5463 /* Category.swift in Sources */,
+				B6E1D5FC28D95F2C009A5463 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
