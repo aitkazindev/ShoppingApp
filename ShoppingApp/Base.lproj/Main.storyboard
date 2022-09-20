@@ -28,7 +28,7 @@
         <!--Category-->
         <scene sceneID="SsV-c0-3lb">
             <objects>
-                <collectionViewController id="aZF-NL-Oxd" sceneMemberID="viewController">
+                <collectionViewController id="aZF-NL-Oxd" customClass="CategoryCollectionViewController" customModule="ShoppingApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wXk-rw-gyZ">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -40,7 +40,7 @@
                             <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="7EO-Fa-vZh">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="7EO-Fa-vZh" customClass="CategoryCollectionViewCell" customModule="ShoppingApp" customModuleProvider="target">
                                 <rect key="frame" x="10" y="10" width="120" height="120"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="W3I-Zz-vpB">
