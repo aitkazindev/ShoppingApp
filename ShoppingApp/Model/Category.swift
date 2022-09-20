@@ -29,6 +29,27 @@ class Category{
     }
 }
 
+//MARK: Download Category
+
+func downloadCategoriesFromFirebase(completion: @escaping (_ categoryArray: [Category]) -> Void) {
+    var categoryArray: [Category] = []
+    FirebaseReference(.Category).getDocuments { (snapshot, error) in
+        guard let snapshot = snapshot else{
+            completion(categoryArray)
+            return
+        }
+        if !snapshot.isEmpty {
+            for categoryDict in snapshot.documents{
+                if let nameOfCategory = categoryDict.data()[kNAME] {
+                    print("creared new category with name: \(nameOfCategory)")
+                    categoryArray.append(Category(_dictionary: categoryDict.data() as NSDictionary))
+                }
+            }
+        }
+        completion(categoryArray)
+    }
+}
+
 // MARK:  Save category function
 
 func saveCategoryToFirebase(_ category: Category){
@@ -38,6 +59,7 @@ func saveCategoryToFirebase(_ category: Category){
 }
 
 // MARK:  Create category from dictionary
+
 func categoryDictionaryFrom(_ category: Category) -> NSDictionary {
     
     if let imageName = category.imageName {
@@ -54,28 +76,3 @@ func categoryDictionaryFrom(_ category: Category) -> NSDictionary {
     return NSDictionary()
 }
 
-
-func createCategory(){
-    let womenClothing = Category(_name: "Women's clothing & Accessories", _imageName: "womenCloth")
-    let camera = Category(_name: "Cameras & Optics", _imageName: "camera")
-    let health = Category(_name: "Health & Beauty", _imageName: "health")
-    let garden = Category(_name: "Garden supplies", _imageName: "garden")
-    let electronics = Category(_name: "Electronics", _imageName: "electronics")
-    let home = Category(_name: "Home & Kitchen", _imageName: "home")
-    let luggage = Category(_name: "Luggage & bags", _imageName: "luggage")
-    let hobby = Category(_name: "Hobby, Sport, Travelling", _imageName: "hobby")
-    let industry = Category(_name: "Industry & Business", _imageName: "industry")
-    let baby = Category(_name: "Baby Stuff", _imageName: "baby")
-    let jewerely = Category(_name: "Jewerely", _imageName: "jewerely")
-    let pet = Category(_name: "Pet products", _imageName: "pet")
-    let footwear = Category(_name: "Footwear", _imageName: "footwear")
-    let car = Category(_name: "Cars & Accessories", _imageName: "car")
-    let menClothing = Category(_name: "Men's Clothing & Accessories", _imageName: "menClothing")
-    
-    let arrayOfCategories = [womenClothing,footwear,electronics,menClothing,home,health,baby,car,luggage,jewerely,hobby,industry,garden,camera,pet]
-    
-    for category in arrayOfCategories {
-        saveCategoryToFirebase(category)
-    }
-
-}

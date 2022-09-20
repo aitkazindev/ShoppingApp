@@ -10,10 +10,13 @@ import UIKit
 private let reuseIdentifier = "Cell"
 
 class CategoryCollectionViewController: UICollectionViewController {
-
+    var categories: [Category] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        createCategory()
+        
+        downloadCategoriesFromFirebase { allCategories in
+            print("callback is completed")
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
