@@ -207,10 +207,14 @@
                                 <rect key="frame" x="20" y="375" width="83.333333333333329" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="5Ej-9c-Ydx" eventType="touchUpInside" id="6af-mv-5LL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="AlV-pL-amk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="HDb-wt-f3V" firstAttribute="leading" secondItem="AlV-pL-amk" secondAttribute="leading" constant="20" id="Idm-1O-m1H"/>
                             <constraint firstItem="EKI-s5-t0D" firstAttribute="top" secondItem="HDb-wt-f3V" secondAttribute="bottom" constant="8" symbolic="YES" id="K2K-LD-83t"/>
@@ -225,12 +229,29 @@
                             <constraint firstItem="H57-bW-9go" firstAttribute="top" secondItem="AlV-pL-amk" secondAttribute="top" constant="20" id="wmx-qo-XAz"/>
                             <constraint firstItem="EKI-s5-t0D" firstAttribute="trailing" secondItem="HDb-wt-f3V" secondAttribute="trailing" id="yyx-Qw-gJI"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="IDz-Qd-vCt" appends="YES" id="H7j-1c-SHx"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Add item" id="SRX-Dt-4n9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TlT-HS-zdp"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TlT-HS-zdp">
+                            <connections>
+                                <action selector="doneBarButtonItemPressed:" destination="5Ej-9c-Ydx" id="4EI-uL-ngI"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="EKI-s5-t0D" id="dWf-fh-xIn"/>
+                        <outlet property="priceTextField" destination="HDb-wt-f3V" id="WAc-RZ-HnU"/>
+                        <outlet property="titleTextField" destination="H57-bW-9go" id="DF9-jv-iAt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VUh-6o-VZ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="IDz-Qd-vCt">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="5Ej-9c-Ydx" id="8V4-gz-r4Y"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="4440" y="-286.49289099526067"/>
         </scene>

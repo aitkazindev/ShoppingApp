@@ -82,6 +82,24 @@
       }
     },
     {
+      "identity" : "instantsearch-ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/algolia/instantsearch-ios",
+      "state" : {
+        "revision" : "039fc0240b4f04514dbd9c51087eace0291bf7b6",
+        "version" : "7.20.0"
+      }
+    },
+    {
+      "identity" : "instantsearch-telemetry-native",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/algolia/instantsearch-telemetry-native",
+      "state" : {
+        "revision" : "d9861ceb2fe25899a31672fb7c648ae8036d3221",
+        "version" : "0.1.3"
+      }
+    },
+    {
       "identity" : "jgprogresshud",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/JonasGessner/JGProgressHUD.git",

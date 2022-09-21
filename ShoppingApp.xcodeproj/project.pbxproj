@@ -16,6 +16,8 @@
 		B69CC08D28DAA9DD0012B175 /* ItemsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69CC08C28DAA9DD0012B175 /* ItemsTableViewController.swift */; };
 		B69CC08F28DAB7CD0012B175 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69CC08E28DAB7CD0012B175 /* Item.swift */; };
 		B69CC09228DAE0930012B175 /* AddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69CC09128DAE0930012B175 /* AddItemViewController.swift */; };
+		B69CC09528DAF1F20012B175 /* InstantSearch in Frameworks */ = {isa = PBXBuildFile; productRef = B69CC09428DAF1F20012B175 /* InstantSearch */; };
+		B69CC09728DAF1F20012B175 /* InstantSearchCore in Frameworks */ = {isa = PBXBuildFile; productRef = B69CC09628DAF1F20012B175 /* InstantSearchCore */; };
 		B6E1D5C328D94BF1009A5463 /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = B6E1D5C228D94BF1009A5463 /* FirebaseAppCheck */; };
 		B6E1D5C528D94BF1009A5463 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = B6E1D5C428D94BF1009A5463 /* FirebaseAuth */; };
 		B6E1D5C728D94BF1009A5463 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B6E1D5C628D94BF1009A5463 /* FirebaseDatabase */; };
@@ -60,11 +62,13 @@
 				B6E1D5D028D94C6C009A5463 /* NVActivityIndicatorViewExtended in Frameworks */,
 				B6E1D5C528D94BF1009A5463 /* FirebaseAuth in Frameworks */,
 				B6E1D5CE28D94C6C009A5463 /* NVActivityIndicatorView in Frameworks */,
+				B69CC09528DAF1F20012B175 /* InstantSearch in Frameworks */,
 				B6E1D5C728D94BF1009A5463 /* FirebaseDatabase in Frameworks */,
 				B6E1D5C928D94BF1009A5463 /* FirebaseFirestore in Frameworks */,
 				B67E1B9F28D949EE00D80EA9 /* AlgoliaSearchClient in Frameworks */,
 				B6E1D5D328D94D30009A5463 /* JGProgressHUD in Frameworks */,
 				B6E1D5CB28D94BF1009A5463 /* FirebaseStorage in Frameworks */,
+				B69CC09728DAF1F20012B175 /* InstantSearchCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +179,8 @@
 				B6E1D5CD28D94C6C009A5463 /* NVActivityIndicatorView */,
 				B6E1D5CF28D94C6C009A5463 /* NVActivityIndicatorViewExtended */,
 				B6E1D5D228D94D30009A5463 /* JGProgressHUD */,
+				B69CC09428DAF1F20012B175 /* InstantSearch */,
+				B69CC09628DAF1F20012B175 /* InstantSearchCore */,
 			);
 			productName = ShoppingApp;
 			productReference = B67E1B8628D949A400D80EA9 /* ShoppingApp.app */;
@@ -209,6 +215,7 @@
 				B6E1D5C128D94BF1009A5463 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				B6E1D5CC28D94C6C009A5463 /* XCRemoteSwiftPackageReference "NVActivityIndicatorView" */,
 				B6E1D5D128D94D30009A5463 /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+				B69CC09328DAF1F10012B175 /* XCRemoteSwiftPackageReference "instantsearch-ios" */,
 			);
 			productRefGroup = B67E1B8728D949A400D80EA9 /* Products */;
 			projectDirPath = "";
@@ -473,6 +480,14 @@
 				kind = branch;
 			};
 		};
+		B69CC09328DAF1F10012B175 /* XCRemoteSwiftPackageReference "instantsearch-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/algolia/instantsearch-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		B6E1D5C128D94BF1009A5463 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -504,6 +519,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B67E1B9D28D949EE00D80EA9 /* XCRemoteSwiftPackageReference "algoliasearch-client-swift" */;
 			productName = AlgoliaSearchClient;
+		};
+		B69CC09428DAF1F20012B175 /* InstantSearch */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B69CC09328DAF1F10012B175 /* XCRemoteSwiftPackageReference "instantsearch-ios" */;
+			productName = InstantSearch;
+		};
+		B69CC09628DAF1F20012B175 /* InstantSearchCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B69CC09328DAF1F10012B175 /* XCRemoteSwiftPackageReference "instantsearch-ios" */;
+			productName = InstantSearchCore;
 		};
 		B6E1D5C228D94BF1009A5463 /* FirebaseAppCheck */ = {
 			isa = XCSwiftPackageProductDependency;
