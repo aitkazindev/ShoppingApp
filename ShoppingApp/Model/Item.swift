@@ -46,14 +46,15 @@ func itemDictionaryFrom(_ item: Item) -> NSDictionary{
         item.name!,
         item.description!,
         item.price!,
-        item.imageLinks!
+    //    item.imageLinks!
     ], forKeys: [
         kOBJECTID as NSCopying,
         kCATEGORYID as NSCopying,
         kNAME as NSCopying,
         kDESCRIPTION as NSCopying,
-        kPRICE as NSCopying,
-        kIMAGELINKS as NSCopying])
+        kPRICE as NSCopying//,
+    //    kIMAGELINKS as NSCopying
+    ])
 }
 
 

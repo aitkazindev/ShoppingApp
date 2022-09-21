@@ -166,7 +166,7 @@
                     <navigationItem key="navigationItem" id="1UR-cG-As8">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="HKX-P3-sIt">
                             <connections>
-                                <segue destination="5Ej-9c-Ydx" kind="show" id="XfO-TQ-J2S"/>
+                                <segue destination="5Ej-9c-Ydx" kind="show" identifier="itemToAddItemSeg" id="XfO-TQ-J2S"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
