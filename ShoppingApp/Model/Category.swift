@@ -40,10 +40,7 @@ func downloadCategoriesFromFirebase(completion: @escaping (_ categoryArray: [Cat
         }
         if !snapshot.isEmpty {
             for categoryDict in snapshot.documents{
-                if let nameOfCategory = categoryDict.data()[kNAME] {
-
-                    categoryArray.append(Category(_dictionary: categoryDict.data() as NSDictionary))
-                }
+                categoryArray.append(Category(_dictionary: categoryDict.data() as NSDictionary))
             }
         }
         completion(categoryArray)

@@ -163,11 +163,76 @@
                             <outlet property="delegate" destination="gpS-fk-3mf" id="dAp-4G-Q4c"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="1UR-cG-As8"/>
+                    <navigationItem key="navigationItem" id="1UR-cG-As8">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="HKX-P3-sIt">
+                            <connections>
+                                <segue destination="5Ej-9c-Ydx" kind="show" id="XfO-TQ-J2S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UhI-6w-rQ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3493.8461538461538" y="-289.33649289099526"/>
+        </scene>
+        <!--Add item-->
+        <scene sceneID="UWQ-3G-Cz0">
+            <objects>
+                <viewController id="5Ej-9c-Ydx" customClass="AddItemViewController" customModule="ShoppingApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XPR-E8-OV6">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="H57-bW-9go">
+                                <rect key="frame" x="20" y="111" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HDb-wt-f3V">
+                                <rect key="frame" x="20" y="155" width="350" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="EKI-s5-t0D">
+                                <rect key="frame" x="20" y="197" width="350" height="168"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="168" id="x6H-P7-7Be"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBq-q2-EY9">
+                                <rect key="frame" x="20" y="375" width="83.333333333333329" height="34.333333333333314"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Camera"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="AlV-pL-amk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HDb-wt-f3V" firstAttribute="leading" secondItem="AlV-pL-amk" secondAttribute="leading" constant="20" id="Idm-1O-m1H"/>
+                            <constraint firstItem="EKI-s5-t0D" firstAttribute="top" secondItem="HDb-wt-f3V" secondAttribute="bottom" constant="8" symbolic="YES" id="K2K-LD-83t"/>
+                            <constraint firstItem="HDb-wt-f3V" firstAttribute="top" secondItem="H57-bW-9go" secondAttribute="bottom" constant="10" id="KIz-te-Zty"/>
+                            <constraint firstItem="OBq-q2-EY9" firstAttribute="leading" secondItem="AlV-pL-amk" secondAttribute="leading" constant="20" id="SZj-vb-ljr"/>
+                            <constraint firstItem="AlV-pL-amk" firstAttribute="trailing" secondItem="OBq-q2-EY9" secondAttribute="trailing" constant="286.66666666666669" id="W9W-qh-7Rc"/>
+                            <constraint firstItem="AlV-pL-amk" firstAttribute="trailing" secondItem="HDb-wt-f3V" secondAttribute="trailing" constant="20" id="XBe-JG-uu5"/>
+                            <constraint firstItem="EKI-s5-t0D" firstAttribute="leading" secondItem="HDb-wt-f3V" secondAttribute="leading" id="aLq-3x-lVu"/>
+                            <constraint firstItem="AlV-pL-amk" firstAttribute="trailing" secondItem="H57-bW-9go" secondAttribute="trailing" constant="20" id="myK-sX-HAd"/>
+                            <constraint firstItem="H57-bW-9go" firstAttribute="leading" secondItem="AlV-pL-amk" secondAttribute="leading" constant="20" id="n0Y-Dh-Xp0"/>
+                            <constraint firstItem="OBq-q2-EY9" firstAttribute="top" secondItem="EKI-s5-t0D" secondAttribute="bottom" constant="10" id="tfy-LT-uz8"/>
+                            <constraint firstItem="H57-bW-9go" firstAttribute="top" secondItem="AlV-pL-amk" secondAttribute="top" constant="20" id="wmx-qo-XAz"/>
+                            <constraint firstItem="EKI-s5-t0D" firstAttribute="trailing" secondItem="HDb-wt-f3V" secondAttribute="trailing" id="yyx-Qw-gJI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Add item" id="SRX-Dt-4n9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="TlT-HS-zdp"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VUh-6o-VZ3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4440" y="-286.49289099526067"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="HCj-iO-6cQ">
@@ -210,6 +275,9 @@
     <resources>
         <image name="doc.fill" catalog="system" width="115" height="128"/>
         <image name="homekit" catalog="system" width="128" height="104"/>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
